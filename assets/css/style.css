@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color:#766F68;
+
+}
+
+header {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-top:2rem;
+}
+
+span {
+    color:#D2872C;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 6rem;
+    transition:.3s all ease-in-out;
+}
+
+#btn-mobile {
+    display:none;
+}
+
+nav {
+   margin-right:6rem; 
+}
+
+#menu {
+    display: flex;
+    list-style-type: none;
+}
+
+
+li {
+    padding-left: 1rem;
+}
+
+li a {
+    text-decoration: none;
+    color:#766F68;
+    font-size:1.4rem;
+    transition: all .3s;
+    
+}
+
+li a:hover {
+    text-decoration: none;
+    color:#D2872C;
+    font-size:1.4rem;
+    
+}
+
+
+main {
+    position:relative;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+   
+   
+}
+
+.main-right {
+    position:relative;
+    padding:2.5rem 0 0 10rem;
+    z-index: 99;
+}
+
+.main-right h1{
+    font-size: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-right h2{
+    font-size: 1.65rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+}
+
+.main-right button {
+    border:none;
+    font-weight: bold;
+    font-size: 1.70rem;
+    padding: 1rem 5rem 1rem 5rem;
+    border-radius: 1rem;
+    background:#D2872C;
+    color: #FFF;
+    cursor:pointer;
+    transition: 0.3s;
+    
+}
+
+.main-right button:hover {
+    opacity: 0.8;
+}
+
+.main-left {
+    width:41rem;
+}
+
+.img-wrapper {
+    position:relative;
+    width: 44.5rem;
+    top: 6rem;
+    right: 7.95rem;
+}
+
+img {
+    width: 100%
+    
+}
+
+@media (max-width:1100px) {
+    
+    header {
+        padding:2rem;
+    }
+
+    span {
+        font-size: 1.7rem;
+        margin-left: 2rem;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        right: 0;
+        height: 0;
+        transition: all 0.6s;
+        background-color: #FFF;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        height: calc(100vh - 90px);
+        visibility: visible;
+        
+    }
+
+    #menu li a {
+       display: inline-block;
+       padding:1rem;
+       margin: 0 2rem; 
+    
+    }
+
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem
+    }
+
+    #hamburguer {
+        color: black;
+        border-top: solid 2px ;
+        width: 20px;
+        transition: all .1s ease-in-out;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: all .3s ease-in-out;
+        position: relative;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+    
+    #nav.active #hamburguer {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    main {
+        position: static;
+        flex-direction: column-reverse;
+        width: 80%;
+        overflow:hidden;
+
+    }
+
+
+    .main-right {
+        position: static;
+        text-align: center;
+        padding: 0;
+    }
+
+    .main-right h1 {
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .main-right h2{
+        font-size: 1.11rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .main-right button {
+        font-size: 1.50rem;
+        padding: 1rem 3rem 1rem 3rem;
+        
+    }
+
+    .main-left {
+        width: 100%;
+    
+    }
+    
+    .img-wrapper {
+        margin: auto ;
+        position: static;
+        margin-top: 1rem ;
+        width: 19.5rem;
+       
+    }
+    
+    img {
+        text-align: center;
+        width: 100%
+    }
+
+
+}

@@ -73,25 +73,25 @@ main {
    
 }
 
-.main-right {
+.main-left {
     position:relative;
     padding:2.5rem 0 0 10rem;
     z-index: 99;
 }
 
-.main-right h1{
+.main-left h1{
     font-size: 4rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.main-right h2{
+.main-left h2{
     font-size: 1.65rem;
     font-weight: 400;
     margin-bottom: 2.5rem;
 }
 
-.main-right button {
+.main-left button {
     border:none;
     font-weight: bold;
     font-size: 1.70rem;
@@ -104,11 +104,11 @@ main {
     
 }
 
-.main-right button:hover {
+.main-left button:hover {
     opacity: 0.8;
 }
 
-.main-left {
+.main-right {
     width:41rem;
 }
 
@@ -214,30 +214,30 @@ img {
     }
 
 
-    .main-right {
+    .main-left {
         position: static;
         text-align: center;
         padding: 0;
     }
 
-    .main-right h1 {
+    .main-left h1 {
         font-size: 2rem;
         margin-top: 1rem;
         margin-bottom: 2rem;
     }
 
-    .main-right h2{
+    .main-left h2{
         font-size: 1.11rem;
         margin-bottom: 3.5rem;
     }
 
-    .main-right button {
+    .main-left button {
         font-size: 1.50rem;
         padding: 1rem 3rem 1rem 3rem;
         
     }
 
-    .main-left {
+    .main-right {
         width: 100%;
     
     }
